@@ -1,0 +1,1 @@
+# FBS QML Minimal template
