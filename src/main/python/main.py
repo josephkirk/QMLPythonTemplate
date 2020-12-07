@@ -37,7 +37,7 @@ log.basicConfig(level=loggerLevel)
 
 import sys
 
-import py_rc
+import app_rc
 
 if __name__ == '__main__':
     QC.QCoreApplication.setAttribute(QC.Qt.AA_EnableHighDpiScaling)
