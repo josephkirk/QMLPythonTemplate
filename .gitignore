@@ -1,5 +1,8 @@
-__pycache__
-dist
-*.pyc
+.vscode
 .venv
 .env
+*.pyc
+build
+dist
+__pycache__
+*/__pycache__

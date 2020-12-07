@@ -1,0 +1,37 @@
+Name: TemplateProject
+SRC: src/main.py
+
+BUILD:
+  Path: src/lib
+  Onefile: false
+  Clean: true
+  Dist: dist
+  Work: build
+  Upx: false
+  excludemodules:
+    - "mkl"
+    - "pip"
+    - "conda"
+    - "black"
+    - "pylint"
+    - "pytest"
+  # Icon: ui/resources/icons/favicon.ico
+
+ENVIRONMENTS:
+  SITEPACKAGES: ".venv/Lib/site-packages"
+  PYSIDE2DIR: "{SITEPACKAGES}/PySide2"
+  QMLDIR: "{PYSIDE2DIR}/qml"
+  SHIBOKENDIR: "{SITEPACKAGES}/shiboken2"
+
+# PRECOMMANDS:
+#   - rm -r *.pyc
+
+# POSTCOMMANDS:
+#   - rm dist/%APPNAME%/api*
+
+QTRESOURCES:
+  Src: ui/qml.qrc
+  Dest: src/libs/py_rc.py
+  Compression: 3
+  Resources:
+    - ui
